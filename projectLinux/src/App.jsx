@@ -3,9 +3,18 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import axios from 'axios'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  const myNodeget = () => {
+    // Node 서버에 접근하고 싶어요 ! 라는 기능 만들기
+    axios('http://10.10.20.6:3001')
+    .then((res)=>{
+      console.log(res)
+    })
+  }
 
   return (
     <>
@@ -23,9 +32,9 @@ function App() {
         </div>
         <button
           className="counter"
-          onClick={() => setCount((count) => count + 1)}
+          onClick={myNodeGet}
         >
-          Count is {count}
+          Node 접근 버튼
         </button>
       </section>
 
