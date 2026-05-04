@@ -8,7 +8,7 @@ import axios from 'axios'
 function App() {
   const [count, setCount] = useState(0)
 
-  const myNodeget = () => {
+  const myNodeGet = () => {
     // Node 서버에 접근하고 싶어요 ! 라는 기능 만들기
     axios('http://10.10.20.6:3001')
     .then((res)=>{
